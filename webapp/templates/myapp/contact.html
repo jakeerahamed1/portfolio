@@ -1,0 +1,79 @@
+{% extends 'myapp/base.html' %}
+{% block contend %}
+
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">Contact</h1>
+</div>
+
+<div class="contact-2 content-area-5">
+    <div class="container">
+        
+        
+        <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+          {% comment %} {% include 'include/message.html' %} {% endcomment %}
+          {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <div class="form-group name">
+                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group email">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group subject">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group number">
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group message">
+                                <textarea class="form-control" name="message" placeholder="Write message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="send-btn text-center">
+                                <button type="submit" class="btn btn-md btn btn-outline-warning my-3 mr-r mt-5 font-italic">Send Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-white">
+                    <div class="contact-info-2">
+                        <div class="ci-box">
+                            <div class="icon">
+                                <i class="flaticon-phone"></i>
+                            </div>
+                            <div class="detail font-italic">
+                                <h5>Phone:</h5>
+                                <p>+91-9989343038</p>
+                            </div>
+                        </div>
+                        <div class="ci-box">
+                            <div class="icon">
+                                <i class="flaticon-mail"></i>
+                            </div>
+                            <div class="detail font-italic">
+                                <h5>Email:</h5>
+                                <p>zakeerahamedshaik246@.com</p>
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock contend %}

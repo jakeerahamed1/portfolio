@@ -1,0 +1,40 @@
+{% extends 'myapp/base.html' %} {% load static %} {% block contend %}
+<div class="mt-5 ml-5">
+  <h1 class="text-warning mb-5 border-bottom">Projects</h1>
+  <div class="row text-white">
+    <div class="col-sm-3 text-center">
+      <img
+        src="{% static 'myapp/images/pm.jpg' %}"
+        alt="not found"
+        class="img-thumbnail ml-5 mb-2"
+        height="50%"
+        width="63%"
+        
+      />
+
+     <h4 class="ml-5  font-italic"><a href="https://pure-milk.herokuapp.com/" target="_blank" class="btn btn-outline-warning my-3 mr-r mt-5"> Puremilk</a></h4>
+    </div>
+    <div class="col-sm-4 text-center">
+      <img
+        src="{% static 'myapp/images/car.jpeg' %}"
+        alt="not found"
+        class="img-thumbnail ml-5 mb-2"
+        width="58%"
+        height="65%"
+      />
+      <h4 class="ml-5 mt-3 font-italic"><a href="https://arcane-garden-90400.herokuapp.com/" target="_blank" class="btn btn-outline-warning my-3 mr-r mt-5">Car-Zone</a></h4>
+    </div>
+    <div class="col-sm-4 text-center">
+      <img
+        src="{% static 'myapp/images/port.jpeg' %}"
+        alt="not found"
+        class="img-thumbnail ml-5 mb-4"
+        width="65%"
+        height="60%"
+      />
+      <h4 <a href="http://127.0.0.1:8000" class="btn btn-outline-warning my-3 mr-r mt-5 ml-5  font-italic">Portfolio</a></h4>
+    </div>
+  </div>
+</div>
+
+{% endblock contend %}
