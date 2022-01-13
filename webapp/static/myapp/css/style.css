@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* font */
 .st-font{
     font-family: "Satisfy", cursive;
@@ -9,7 +14,7 @@ html,body{
 }
 .container-fluid{
     min-height: 100%;
-}
+}   
 a.nav-link {
     color: whitesmoke;
 }
@@ -22,3 +27,12 @@ a.nav-link.active {
     background-color: #ffc107;
     font-weight: bold;
 }
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+

@@ -8,36 +8,30 @@
     <title>jakeer-portfolio</title>
     <link rel="stylesheet" href="{% static 'myapp/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css' %}" />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
     {% block webappcss %}
-     <link  href="{% static 'myapp/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'myapp/css/style.css' %}" rel="stylesheet" />
     {% endblock webappcss %}
-    
-  
   </head>
   <body>
-      <div class="container-fluid bg-dark">
-        <div class="row">
-            <div class="col-sm-2">
-                
-                  {% include 'myapp/sidebar.html' %}
-            </div>
-            <div class="col-sm-10">
-                {% block contend %}
-
-                {% endblock contend %}
-            </div>
-
-          
-
-
-        </div>
-
+    <div class="container-fluid bg-dark">
+      <div class="row">
+        <div class="col-sm-2">{% include 'myapp/sidebar.html' %}</div>
+        <div class="col-sm-10">{% block contend %} {% endblock contend %}</div>
       </div>
-
-
-
+     
+    </div>
+    
+     <div class="footer">
+        <p class="text-white bg-dark container-fluid text-center mt-5">
+          © {% now 'Y' %} zakeerahamedshaik246@gmail.com. All rights reserved
+        </p>
+      
+      </div>
 
     <script src="{% static 'myapp/js/jquery.js' %}"></script>
     <script src="{% static 'myapp/js/proper.js' %}"></script>
